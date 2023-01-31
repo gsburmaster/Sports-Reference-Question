@@ -1,2 +1,5 @@
 # Sports-Reference-Question
 Sports Reference 2023 internship question
+
+I considered two methods for solving the problem: First, loading each result win and loss into a double array (where wins and losses are in inverse positions in the array) and then reading through the array linearly, and the solution I ended up using, where you simply iterate over the W key of the data.
+Javascript stores Objects (what it turns JSON into when JSON.parse() is called) not as a true hashmap but as a flexible structure with an upper bound of O(n) for access time. I found this to be acceptable as opposed to iterating through the JSON to create a hashmap. Then, I simply iterate over the W column of each team and add the respective records to the output string. My solution is also flexible for different amounts of teams (for when the NFL expands permanently to Europe, for example). My solution should be O(n^2) where n is number of teams.
